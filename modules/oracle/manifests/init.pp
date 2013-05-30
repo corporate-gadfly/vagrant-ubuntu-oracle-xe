@@ -54,7 +54,7 @@ class oracle::swap {
   exec {
     "create swapfile":
       # Needs to be 2 times the memory
-      command => "/bin/dd if=/dev/zero of=/swapfile bs=1M count=1024",
+      command => "/bin/dd if=/dev/zero of=/swapfile bs=1M count=4096",
       user => root,
       creates => "/swapfile";
     "set up swapfile":
